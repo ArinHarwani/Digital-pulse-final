@@ -1,0 +1,46 @@
+{
+    "app": {
+        "title": "RoadResQ"
+    },
+    "auth": {
+        "login": "लॉग इन करें",
+        "signup": "खाता बनाएं",
+        "welcomeBack": "वापसी पर स्वागत है",
+        "createAccount": "खाता बनाएं",
+        "step": "चरण {{current}} / {{total}}",
+        "username": "उपयोगकर्ता नाम",
+        "password": "पासवर्ड",
+        "confirmPassword": "पासवर्ड की पुष्टि करें",
+        "familyPhone": "परिवार का फोन नंबर",
+        "secureAccount": "सुरक्षित खाता",
+        "creating": "खाता बना रहा है...",
+        "loggingIn": "लॉग इन हो रहा है...",
+        "createAndContinue": "बनाएं और जारी रखें",
+        "chooseUsername": "उपयोगकर्ता नाम चुनें",
+        "enterPassword": "पासवर्ड डालें",
+        "enterFamilyPhone": "परिवार के सदस्य का फोन डालें"
+    },
+    "home": {
+        "emergency": "आपातकालीन",
+        "accident": "दुर्घटना",
+        "medical": "चिकित्सा",
+        "heart": "हृदय आपातकाल",
+        "maternity": "प्रसूति",
+        "police": "पुलिस",
+        "fire": "आग",
+        "other": "अन्य",
+        "womenSafety": "महिला सुरक्षा",
+        "sendingAlert": "चेतावनी भेजी जा रही है...",
+        "helpOnWay": "मदद रास्ते में है!",
+        "tapToCancel": "रद्द करने के लिए टैप करें",
+        "sos": "एसओएस",
+        "location": "स्थान",
+        "map": "नक्शा"
+    },
+    "nav": {
+        "home": "होम",
+        "firstAid": "प्राथमिक उपचार",
+        "status": "स्थिति",
+        "settings": "सेटिंग्स"
+    }
+}

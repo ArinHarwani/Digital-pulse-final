@@ -1,0 +1,46 @@
+{
+    "app": {
+        "title": "RoadResQ"
+    },
+    "auth": {
+        "login": "Login",
+        "signup": "Create Account",
+        "welcomeBack": "Welcome Back",
+        "createAccount": "Create Account",
+        "step": "Step {{current}} of {{total}}",
+        "username": "Username",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "familyPhone": "Family Phone Number",
+        "secureAccount": "Secure Account",
+        "creating": "Creating Account...",
+        "loggingIn": "Logging In...",
+        "createAndContinue": "Create & Continue",
+        "chooseUsername": "Choose a username",
+        "enterPassword": "Enter password",
+        "enterFamilyPhone": "Enter family member's phone"
+    },
+    "home": {
+        "emergency": "Emergency",
+        "accident": "Accident",
+        "medical": "Medical",
+        "heart": "Heart Emergency",
+        "maternity": "Maternity",
+        "police": "Police",
+        "fire": "Fire",
+        "other": "Other",
+        "womenSafety": "Women Safety",
+        "sendingAlert": "Sending Alert...",
+        "helpOnWay": "Help is on the way!",
+        "tapToCancel": "Tap to Cancel",
+        "sos": "SOS",
+        "location": "Location",
+        "map": "Map"
+    },
+    "nav": {
+        "home": "Home",
+        "firstAid": "First Aid",
+        "status": "Status",
+        "settings": "Settings"
+    }
+}

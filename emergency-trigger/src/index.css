@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RoadResQ Design System - Emergency Medical App */
+
+@layer base {
+  :root {
+    /* Core Colors - Emergency Medical Theme */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    /* Emergency Red - Primary Action */
+    --primary: 0 84% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Calm Blue - Secondary/Info */
+    --secondary: 210 90% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent - Amber Warning */
+    --accent: 38 95% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success Green */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Destructive stays red */
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 0 84% 50%;
+
+    --radius: 1rem;
+
+    /* Emergency specific tokens */
+    --emergency-red: 0 84% 50%;
+    --emergency-red-light: 0 84% 95%;
+    --emergency-red-dark: 0 84% 40%;
+    
+    --safe-blue: 210 90% 55%;
+    --safe-blue-light: 210 90% 95%;
+    
+    --warning-amber: 38 95% 50%;
+    --warning-amber-light: 38 95% 92%;
+    
+    --medical-green: 142 70% 45%;
+    --medical-green-light: 142 70% 95%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 20% 10% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 20% 10% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(220 20% 10% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(220 20% 10% / 0.1);
+    --shadow-emergency: 0 0 40px hsl(0 84% 50% / 0.4);
+    --shadow-sos: 0 0 60px hsl(0 84% 50% / 0.5), 0 0 100px hsl(0 84% 50% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 84% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 90% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 38 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 70% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 0 84% 55%;
+
+    --emergency-red: 0 84% 55%;
+    --emergency-red-light: 0 84% 20%;
+    --emergency-red-dark: 0 84% 45%;
+    
+    --safe-blue: 210 90% 60%;
+    --safe-blue-light: 210 90% 20%;
+    
+    --warning-amber: 38 95% 55%;
+    --warning-amber-light: 38 95% 20%;
+    
+    --medical-green: 142 70% 50%;
+    --medical-green-light: 142 70% 20%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Blob Animation */
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  .dark .glass {
+    @apply bg-black/70 border-white/10;
+  }
+
+  /* Emergency pulse animation */
+  .animate-emergency-pulse {
+    animation: emergency-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes emergency-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--emergency-red) / 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 20px hsl(var(--emergency-red) / 0);
+    }
+  }
+
+  /* SOS button glow */
+  .animate-sos-glow {
+    animation: sos-glow 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes sos-glow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--emergency-red) / 0.5), 0 0 40px hsl(var(--emergency-red) / 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(var(--emergency-red) / 0.7), 0 0 80px hsl(var(--emergency-red) / 0.4);
+    }
+  }
+
+  /* Smooth gradient text */
+  .text-gradient-emergency {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--emergency-red)) 0%, hsl(var(--warning-amber)) 100%);
+  }
+
+  /* Card hover effects */
+  .card-interactive {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-interactive:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Status indicator */
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-dot-online {
+    @apply bg-medical-green;
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes status-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Ambulance tracking animation */
+  .animate-ambulance-move {
+    animation: ambulance-move 1s ease-in-out infinite;
+  }
+
+  @keyframes ambulance-move {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+
+  /* Ripple effect for buttons */
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple-effect::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, hsl(0 0% 100% / 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.3s;
+  }
+
+  .ripple-effect:active::after {
+    transform: scale(2);
+    opacity: 1;
+    transition: 0s;
+  }
+}

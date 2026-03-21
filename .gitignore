@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Environment files (Recursive)
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/*.download
+
+# Private Config (NEVER push secrets)
+PRIVATE_CONFIG.env
+PRIVATE_KEYS.env
+
+# Build outputs
+.next/
+dist/
+out/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Old folder names (during migration)
+3RD-PHASE-HOSPITAL-main/
+1st interface/
+
+# Misc
+exclude_list.txt

@@ -1,0 +1,86 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      # Build User App (1st Interface)
+      - name: Install and Build User App
+        working-directory: ./1st interface/guardian-angel-ai-main
+        run: |
+          bun install
+          bun run build
+
+      # Build Hospital App
+      - name: Install and Build Hospital App
+        working-directory: ./3RD-PHASE-HOSPITAL-main
+        run: |
+          npm install
+          npm run build
+
+      # Build Driver App
+      - name: Install and Build Driver App
+        working-directory: ./swift-response-app-main
+        run: |
+          npm install
+          npm run build
+
+      # Prepare Deployment Directory
+      - name: Prepare Deployment Directory
+        run: |
+          mkdir public_html
+          # Move User App to root
+          cp -r "1st interface/guardian-angel-ai-main/dist/"* public_html/
+          
+          # Create subdirectories using -p to ensure parent dirs exist
+          mkdir -p public_html/hospital
+          mkdir -p public_html/driver
+          
+          # Move Hospital App
+          cp -r 3RD-PHASE-HOSPITAL-main/dist/* public_html/hospital/
+          
+          # Move Driver App
+          cp -r swift-response-app-main/dist/* public_html/driver/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public_html'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
