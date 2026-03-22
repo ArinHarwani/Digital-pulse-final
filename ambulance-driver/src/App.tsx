@@ -19,7 +19,7 @@ const App = () => (
       <DriverProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/RRQ/driver/">
+        <BrowserRouter basename="/">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<DriverDashboard />} />
