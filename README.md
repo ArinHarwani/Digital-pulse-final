@@ -76,10 +76,10 @@ cd Digital-pulse-final
 
 | Interface | URL | Description |
 |:---|:---|:---|
-| 🩺 **Patient Portal** | `http://localhost:3000` | Health dashboard + SOS button |
-| 🚨 **Emergency Trigger** | `http://localhost:3003` | One-tap emergency activation |
-| 🚑 **Ambulance Driver** | `http://localhost:3002` | Alert reception + navigation |
-| 🏥 **Hospital Dashboard** | `http://localhost:3001` | Pre-arrival patient readiness |
+| 🩺 **Patient Portal** | `https://patient-portal-six-red.vercel.app/` | Health dashboard + SOS button |
+| 🚨 **Emergency Trigger** | `https://digitalpulse-emergency.vercel.app/` | One-tap emergency activation |
+| 🚑 **Ambulance Driver** | `https://ambulance-driver-q50ficb7w-arinharwanis-projects.vercel.app/` | Alert reception + navigation |
+| 🏥 **Hospital Dashboard** | `https://hospital-dashboard-gtau4ywz2-arinharwanis-projects.vercel.app/` | Pre-arrival patient readiness |
 
 ---
 
