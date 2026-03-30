@@ -34,3 +34,8 @@ Thumbs.db
 
 # Misc
 exclude_list.txt
+**/.env.prod.test
+**/.env.prod.check
+force_update_env.js
+deploy_emergency.js
+upload_to_vercel.js

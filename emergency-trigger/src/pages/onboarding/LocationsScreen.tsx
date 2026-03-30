@@ -70,8 +70,7 @@ const MapSelector = ({
       >
         <ChangeView center={[lat, lng]} />
         <TileLayer
-          attribution='&copy; <a href="https://www.mapbox.com/">Mapbox</a>'
-          url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}?access_token=${import.meta.env.VITE_MAPBOX_TOKEN}`}
+          url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}?access_token=`}
           tileSize={512}
           zoomOffset={-1}
         />
@@ -139,7 +138,7 @@ const LocationsScreen = () => {
 
   const reverseGeocode = async (lat: number, lng: number) => {
     try {
-      const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN;
+      const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN || '';
       const response = await fetch(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${mapboxToken}`,
         {

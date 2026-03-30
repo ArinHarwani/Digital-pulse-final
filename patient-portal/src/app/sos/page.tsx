@@ -235,7 +235,7 @@ export default function SOSScreen() {
               >
                 <TileLayer
                   attribution='&copy; Mapbox'
-                  url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_TOKEN}`}
+                  url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=`}
                 />
                 <Marker position={[displayLat, displayLng]} />
                 <RecenterMap lat={displayLat} lng={displayLng} />

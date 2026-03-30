@@ -234,7 +234,7 @@ export default function TrackingScreen() {
           <div className="h-full w-full absolute inset-0 z-0 pt-[52px]">
             {typeof window !== 'undefined' && (
               <MapContainer center={[displayLat, displayLng]} zoom={16} style={{ height: '100%', width: '100%' }} zoomControl={false}>
-                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_TOKEN}`} attribution='&copy; Mapbox' />
+                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=`} attribution='&copy; Mapbox' />
                 
                 {/* Mapbox Route Line */}
                 {routePath.length > 0 && (

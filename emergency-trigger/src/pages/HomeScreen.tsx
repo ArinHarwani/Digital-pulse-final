@@ -97,7 +97,8 @@ const HomeScreen = () => {
 
         // Reverse geocoding via Mapbox
         try {
-          const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN;
+          // 2. Mapbox Request
+          const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN || '';
           const response = await fetch(
             `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxToken}`,
             { headers: { 'User-Agent': 'RoadResQ Emergency App' } }
@@ -379,7 +380,7 @@ const HomeScreen = () => {
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.mapbox.com/">Mapbox</a>'
-                url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}?access_token=${import.meta.env.VITE_MAPBOX_TOKEN}`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}?access_token=`}
                 tileSize={512}
                 zoomOffset={-1}
               />

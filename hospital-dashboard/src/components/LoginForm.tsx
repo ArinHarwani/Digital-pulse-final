@@ -57,18 +57,7 @@ export function LoginForm({ onLogin }: LoginFormProps) {
     setIsLoading(false);
   };
 
-  // Filter hospitals by selected city
-  const filteredHospitals = hospitals.filter(h => {
-    if (!selectedCity) return false;
-    let hLng = 75.8;
-    if (typeof h.location === 'object' && h.location?.coordinates) {
-      hLng = h.location.coordinates[0];
-    } else if (typeof h.location === 'string') {
-      const match = h.location.match(/POINT\s*\(\s*([\d.-]+)\s+([\d.-]+)\s*\)/i);
-      if (match) hLng = parseFloat(match[1]);
-    }
-    return selectedCity === 'Jaipur' ? hLng > 74.0 : hLng < 74.0;
-  });
+  const filteredHospitals = hospitals.filter(h => h && h.name);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-background">

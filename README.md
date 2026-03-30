@@ -76,9 +76,10 @@ cd Digital-pulse-final
 
 | Interface | URL | Description |
 |:---|:---|:---|
-| 🩺 **Patient Portal** | `https://patient-portal-six-red.vercel.app/` | Health dashboard + SOS button |
-| 🚑 **Ambulance Driver** | `https://ambulance-driver-q50ficb7w-arinharwanis-projects.vercel.app/` | Alert reception + navigation |
-| 🏥 **Hospital Dashboard** | `https://hospital-dashboard-gtau4ywz2-arinharwanis-projects.vercel.app/` | Pre-arrival patient readiness |
+| 🩺 **Patient Portal** | [patient-portal-six-red.vercel.app](https://patient-portal-six-red.vercel.app/) | Health dashboard + SOS button |
+| 🚨 **Emergency Trigger** | [emergency-trigger-arinharwanis-projects.vercel.app](https://emergency-trigger-arinharwanis-projects.vercel.app/) | One-tap emergency activation |
+| 🚑 **Ambulance Driver** | [ambulance-driver.vercel.app](https://ambulance-driver.vercel.app/) | Alert reception + navigation |
+| 🏥 **Hospital Dashboard** | [hospital-dashboard-arinharwanis-projects.vercel.app](https://hospital-dashboard-arinharwanis-projects.vercel.app/) | Pre-arrival patient readiness |
 
 ---
 

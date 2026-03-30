@@ -362,7 +362,7 @@ const DriverDashboard: React.FC = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Location:</span>
-                <span className="font-semibold truncate max-w-[150px]">{incomingAlert.patient_address || incomingAlert.patient_location}</span>
+                <span className="font-semibold truncate max-w-[150px]">{incomingAlert.patient_address || (typeof incomingAlert.patient_location === 'string' ? incomingAlert.patient_location : `${incomingAlert.patient_lat.toFixed(4)}, ${incomingAlert.patient_lng.toFixed(4)}`)}</span>
               </div>
             </div>
 
