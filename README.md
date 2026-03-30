@@ -52,6 +52,15 @@ In India, **delayed ambulance arrival, lack of coordination, and absence of imme
 
 ## 🚀 Quick Start
 
+| Interface | URL | Description |
+|:---|:---|:---|
+| 🩺 **Patient Portal** | [patient-portal-six-red.vercel.app](https://patient-portal-six-red.vercel.app/) | Health dashboard + SOS button |
+| 🚑 **Ambulance Driver** | [ambulance-driver.vercel.app](https://ambulance-driver.vercel.app/) | Alert reception + navigation |
+| 🏥 **Hospital Dashboard** | [hospital-dashboard-arinharwanis-projects.vercel.app](https://hospital-dashboard-arinharwanis-projects.vercel.app/) | Pre-arrival patient readiness |
+
+> **That's it!** All 3 interfaces will open in separate terminal windows.
+
+>OR FOR MANUAL SETUP (OPTIONAL) 
 ### Prerequisites
 - **[Node.js](https://nodejs.org/)** v18 or higher
 - **Windows OS** (for the one-click launcher)
@@ -71,16 +80,6 @@ cd Digital-pulse-final
 #    This will install all dependencies, configure API keys,
 #    and launch all 4 interfaces automatically!
 ```
-
-> **That's it!** All 4 interfaces will open in separate terminal windows.
-
-| Interface | URL | Description |
-|:---|:---|:---|
-| 🩺 **Patient Portal** | [patient-portal-six-red.vercel.app](https://patient-portal-six-red.vercel.app/) | Health dashboard + SOS button |
-| 🚨 **Emergency Trigger** | [emergency-trigger-arinharwanis-projects.vercel.app](https://emergency-trigger-arinharwanis-projects.vercel.app/) | One-tap emergency activation |
-| 🚑 **Ambulance Driver** | [ambulance-driver.vercel.app](https://ambulance-driver.vercel.app/) | Alert reception + navigation |
-| 🏥 **Hospital Dashboard** | [hospital-dashboard-arinharwanis-projects.vercel.app](https://hospital-dashboard-arinharwanis-projects.vercel.app/) | Pre-arrival patient readiness |
-
 ---
 
 ## ✨ Key Features
